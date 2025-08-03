@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Earth Overview</title>
+  <style>
+    body { margin: 0; background: #000; color: #fff; font-family: Arial; overflow-x: hidden; }
+    header {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      z-index: 10;
+    }
+    header a {
+      color: #0ff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .title {
+      font-size: 3rem;
+      text-align: center;
+      margin-top: 80px;
+      color: #00ffff;
+      text-shadow: 0 0 10px cyan;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px cyan; }
+      to { text-shadow: 0 0 20px white; }
+    }
+    .content {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 2px solid cyan;
+      margin-top: 20px;
+    }
+    model-viewer {
+      width: 100vw;
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div><strong>Cyber Earth</strong></div>
+    <nav>
+      <a href="earth.html">Earth</a>
+      <a href="knowmore.html">Know More</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <div class="title">Explore the Planet Earth</div>
+
+  <model-viewer src="assets/u.glb" camera-controls auto-rotate background-color="#000000" style="margin-top: 2rem;" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
+
+  <div class="content">
+    <h2>About Earth</h2>
+    <p>
+      Earth is the third planet from the Sun and the only known place in the universe that harbors life.
+      It has a rich atmosphere, flowing water, diverse ecosystems, and a protective magnetic field.
+    </p>
+
+    <h3>Learn More</h3>
+    <iframe src="https://en.wikipedia.org/wiki/Earth"></iframe>
+  </div>
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</body>
+</html>

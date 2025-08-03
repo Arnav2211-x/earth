@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+    h1 {
+      text-align: center;
+      color: #00ffee;
+      margin-bottom: 40px;
+    }
+    .contact-box {
+      max-width: 600px;
+      margin: auto;
+      background: #111;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background: #222;
+      color: white;
+      border: 1px solid #333;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #00ffee;
+      border: none;
+      color: black;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Contact Us</h1>
+
+  <div class="contact-box">
+    <form>
+      <label for="name">Name</label>
+      <input id="name" type="text" placeholder="Your Name" required />
+
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="Your Email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" placeholder="Write your message here..."></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+</body>
+</html>
